@@ -26,7 +26,7 @@ Configure this from your **Settings > Keyboard > Shortcuts > Window Manager**.
 
 #### 🔹 Command to edit:
 ```bash
-nano ~/.zshrc
+vim ~/.zshrc
 ```
 
 #### 🔹 Paste the following block:
@@ -53,7 +53,7 @@ add 10.10.11.123
 
 #### 🔹 Command to edit:
 ```bash
-nano ~/.tmux.conf
+vim ~/.tmux.conf
 ```
 
 #### 🔹 Paste the following config:
@@ -109,7 +109,7 @@ bind r source-file ~/.tmux.conf
 
 #### 🔹 Command to edit:
 ```bash
-sudo nano /etc/vim/vimrc
+sudo vim /etc/vim/vimrc
 ```
 
 #### 🔹 Add this at the bottom:
