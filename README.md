@@ -37,14 +37,22 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach-session -t main || tmux new-session -s main
 fi
 
-# Alias to add IP as 'target1' to /etc/hosts
-alias add='f(){ echo "$1 target1" | sudo tee -a /etc/hosts; }; f'
+# Alias to add IP as to /etc/hosts
+addhost() {
+  if [ $# -ne 2 ]; then
+    echo "Usage: addhost <IP> <hostname>"
+    return 1
+  fi
+  echo "$1 $2" | sudo tee -a /etc/hosts > /dev/null
+  echo "Added: $1 $2"
+}
+
 ```
 
 #### 🧪 Example usage:
 ```bash
-add 10.10.11.123
-# This adds: 10.10.11.123 target1 to /etc/hosts
+addhost 192.168.1.100 myserver
+# This adds: 192.168.1.100 myserver to /etc/hosts
 ```
 
 ---
