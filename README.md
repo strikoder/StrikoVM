@@ -10,7 +10,7 @@ A repo to keep a light version of dotfiles for Kali Linux pentesting environment
 
 ### ✅ 1. Window Manager: Workspaces
 
-Set keyboard shortcuts in your WM (like XFCE or i3) to:
+Set keyboard shortcuts in your settings to be similar like others WM:
 
 ```
 Super+1 = Workspace 1  
