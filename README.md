@@ -1,14 +1,20 @@
 # 📁 Strikodot-Kali-edition
 
-**Well, I decided to script everything *AGAIN* afterall. So here we go :D**
+**Yep, I scripted everything *AGAIN*. This time it’s leaner, meaner, and finally reusable. Let’s go! 😎**
 
-A lightweight and flexible bootstrap for Kali Linux pentesting environments — designed for full automation but easy to understand and extend.
+A lightweight and flexible bootstrap for Kali Linux pentesting environments — built for full automation, quick setup, and terminal Zen.
+
+---
+
+![Kali](https://img.shields.io/badge/Kali-Linux-blue?logo=linux\&logoColor=white)
+![Auto-Setup](https://img.shields.io/badge/Automated-Setup-success?style=flat-square\&color=brightgreen)
+![Made with ❤️ by Strikoder](https://img.shields.io/badge/Maintained%20by-strikoder-blueviolet?style=flat-square)
 
 ---
 
 ## ⚡ One-Line Full Setup
 
-Run this on any fresh Kali box to install tools, configure the shell and tmux, fetch `linPEAS`, and more:
+Run this on any fresh Kali box to install tools, configure Zsh and tmux, fetch `linPEAS`, and get straight to pwning:
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/strikoder/Strikodot-Kali-edition/main/setup.sh | bash
@@ -16,30 +22,54 @@ curl -sSL https://raw.githubusercontent.com/strikoder/Strikodot-Kali-edition/mai
 
 ---
 
-## 🧭 What This Script Does
+## 🧭 What This Script Does & What You Get
 
-* Installs: `git`, `tmux`, `zsh`, `vim`, `feroxbuster`, `dirbuster`, `seclists`
-* Creates `~/strikodot` working directory
-* Downloads: `linPEAS.sh`
-* Appends Zsh config for tmux auto-split and `addhost` function
-* Generates `~/.tmux.conf` with sane keybindings and layout
-* Adds `set clipboard=unnamedplus` to Vim config
-* Reminds you to set workspace shortcuts manually
+This script sets up your Kali shell environment with:
+
+### 🔧 Core Installs
+
+* `git`, `tmux`, `zsh`, `vim`, `feroxbuster`, `dirbuster`, `seclists`
+
+### 📁 File Structure
+
+* Creates `~/strikodot` for tool storage
+
+### 📥 Payload Fetching
+
+* Grabs the latest `linPEAS.sh` for Linux privilege escalation
+
+### ⚙️ Zsh Setup
+
+* Auto-starts tmux on terminal open (with a vertical split by default)
+* Adds a clean `addhost` function to manage `/etc/hosts`
+
+### 🪟 Tmux Configuration
+
+* Loads sane keybindings into `~/.tmux.conf`
+* Vim-style pane navigation, smart directory splitting
+* Enables mouse & clipboard support
+* Prefix changed from `Ctrl+B` to the less annoying `Ctrl+S`
+
+### 📝 Vim Clipboard
+
+* Enables system clipboard support for copy/paste magic
 
 ---
 
-## 🧠 Post-Setup Manual Steps
+## 🔧 Post-Setup Manual Steps
 
-Some things must still be done manually:
+These parts are still on you (for now):
 
-### 🔹 Install these tools manually:
+### 📦 Manual Downloads
 
-* [Ligolo-ng](https://github.com/nicocha30/ligolo-ng/releases)
-* [winPEAS](https://github.com/peass-ng/PEASS-ng/releases)
+Download and extract the following:
 
-Put them somewhere like `~/tools/` or `~/strikodot/`.
+* [Ligolo-ng](https://github.com/nicocha30/ligolo-ng/releases) — tunnel everything
+* [winPEAS](https://github.com/peass-ng/PEASS-ng/releases) — escalate on Windows like a boss
 
-### 🔹 Configure workspace keybindings
+👉 Place them in `~/tools/` or `~/strikodot/` for consistency.
+
+### 🧠 Configure Workspace Navigation Shortcuts
 
 Go to:
 
@@ -47,26 +77,30 @@ Go to:
 Settings > Keyboard > Shortcuts > Navigation
 ```
 
-And set:
+And set these like a proper tiling WM user:
 
 ```
-Super+1           = Switch to Workspace 1
-Super+2           = Switch to Workspace 2
-Ctrl+Super+1      = Move window to Workspace 1
-Ctrl+Super+2      = Move window to Workspace 2
+Super+1           → Switch to Workspace 1  
+Super+2           → Switch to Workspace 2  
+Ctrl+Super+1      → Move window to Workspace 1  
+Ctrl+Super+2      → Move window to Workspace 2  
 ```
 
 ---
 
-## ✅ After Running the Script
+## 🧰 My Pinned Pentest Tools (Auto + Manual)
 
-* Shell auto-launches tmux with vertical split
-* You can use `addhost 10.10.10.5 t1` to manage `/etc/hosts`
-* Vim supports clipboard copy/paste
-* Tmux uses `Ctrl+S` as prefix, supports mouse, and has Vim-style navigation
-
-You're now ready to hack.
+* [linPEAS](https://github.com/carlospolop/PEASS-ng) — Linux privesc checker ✅ auto-installed
+* [winPEAS](https://github.com/carlospolop/PEASS-ng) — Windows privesc checker ❌ manual
+* [Ligolo-ng](https://github.com/nicocha30/ligolo-ng) — Reverse SOCKS tunneler ❌ manual
+* [feroxbuster](https://github.com/epi052/feroxbuster) — Fast content discovery ✅ auto
+* [dirbuster](https://tools.kali.org/web-applications/dirbuster) — Classic brute-forcer ✅ auto
+* [ffuf](https://github.com/ffuf/ffuf) — Fast fuzzer for web dirs ❌ (install if needed)
+* [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) — Best WinRM shell ❌
+* [pSpy](https://github.com/DominicBreuker/pspy) — Process monitor without root ❌
 
 ---
 
-Maintained by [@strikoder](https://github.com/strikoder)
+Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikoder) 💻
+
+---
