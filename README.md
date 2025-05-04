@@ -22,54 +22,46 @@ curl -sSL https://raw.githubusercontent.com/strikoder/Strikodot-Kali-edition/mai
 
 ---
 
-## 🧭 What This Script Does & What You Get
-
-This script sets up your Kali shell environment with:
-
-### 🔧 Core Installs
+## 🔧 Core Installs
 
 * `git`, `tmux`, `zsh`, `vim`, `feroxbuster`, `dirbuster`, `seclists`
 
-### 📁 File Structure
+## 📁 File Structure
 
 * Creates `~/strikodot` for tool storage
 
-### 📥 Payload Fetching
+## 📥 Payload Fetching
 
 * Grabs the latest `linPEAS.sh` for Linux privilege escalation
 
-### ⚙️ Zsh Setup
+## ⚙️ Zsh Setup
 
 * Auto-starts tmux on terminal open (with a vertical split by default)
 * Adds a clean `addhost` function to manage `/etc/hosts`
 
-### 🪟 Tmux Configuration
+## 🪟 Tmux Configuration
 
 * Loads sane keybindings into `~/.tmux.conf`
 * Vim-style pane navigation, smart directory splitting
 * Enables mouse & clipboard support
 * Prefix changed from `Ctrl+B` to the less annoying `Ctrl+S`
 
-### 📝 Vim Clipboard
+## 📝 Vim Clipboard
 
 * Enables system clipboard support for copy/paste magic
 
 ---
 
-## 🔧 Post-Setup Manual Steps
-
-These parts are still on you (for now):
-
-### 📦 Manual Downloads
+## 📦 Manual Downloads
 
 Download and extract the following:
 
 * [Ligolo-ng](https://github.com/nicocha30/ligolo-ng/releases) — tunnel everything
 * [winPEAS](https://github.com/peass-ng/PEASS-ng/releases) — escalate on Windows like a boss
 
-👉 Place them in `~/tools/` or `~/strikodot/` for consistency.
+👉 Place them in `~/strikodot/` for consistency.
 
-### 🧠 Configure Workspace Navigation Shortcuts
+## 🧠 Configure Workspace Navigation Shortcuts
 
 Go to:
 
