@@ -94,3 +94,5 @@ Ctrl+Super+2      → Move window to Workspace 2
 Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikoder) 💻
 
 ---
+TODOs:
+add rustscan, enum4linux-ng	, dig, dnsrecon, dnsenum, nikto, gobuster, msf and db init... to be continued 
