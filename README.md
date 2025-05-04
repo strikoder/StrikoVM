@@ -8,7 +8,7 @@ A lightweight and flexible bootstrap for Kali Linux pentesting environments — 
 
 ![Kali](https://img.shields.io/badge/Kali-Linux-blue?logo=linux\&logoColor=white)
 ![Auto-Setup](https://img.shields.io/badge/Automated-Setup-success?style=flat-square\&color=brightgreen)
-![Made with ❤️ by Strikoder](https://img.shields.io/badge/Maintained%20by-strikoder-blueviolet?style=flat-square)
+![Made with ❤️ by $tr!k0d3r](https://img.shields.io/badge/Maintained%20by-$tr!k0d3r-blueviolet?style=flat-square)
 
 ---
 
