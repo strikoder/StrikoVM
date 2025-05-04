@@ -95,4 +95,4 @@ Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikode
 
 ---
 TODOs:
-add rustscan, enum4linux-ng	, dig, dnsrecon, dnsenum, nikto, gobuster, msf and db init... to be continued 
+add rustscan, enum4linux-ng	, dig, dnsrecon, dnsenum, nikto, gobuster, msf and db init, nessus... to be continued 
