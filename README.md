@@ -6,7 +6,7 @@ A lightweight and flexible bootstrap for Kali Linux pentesting environments — 
 
 ![Kali](https://img.shields.io/badge/Kali-Linux-blue?logo=linux\&logoColor=white)
 ![Auto-Setup](https://img.shields.io/badge/Automated-Setup-success?style=flat-square\&color=brightgreen)
-![Made with ❤️ by $tr!k0d3r](https://img.shields.io/badge/Maintained%20by-$tr!k0d3r-blueviolet?style=flat-square)
+![Made with ❤️ by \$tr!k0d3r](https://img.shields.io/badge/Maintained%20by-\$tr!k0d3r-blueviolet?style=flat-square)
 
 ---
 
@@ -22,7 +22,7 @@ curl -sSL https://raw.githubusercontent.com/strikoder/Strikodot-Kali-edition/mai
 
 ## 🔧 Core Installs
 
-* `git`, `tmux`, `zsh`, `vim`, `feroxbuster`, `dirbuster`, `seclists`
+* `git`, `tmux`, `feroxbuster`, `dirbuster`, `seclists`
 
 ## 📁 File Structure
 
@@ -47,6 +47,40 @@ curl -sSL https://raw.githubusercontent.com/strikoder/Strikodot-Kali-edition/mai
 ## 📝 Vim Clipboard
 
 * Enables system clipboard support for copy/paste magic
+
+---
+
+## 🔧 Custom CLI Tools
+
+As part of the setup, the following scripts are installed to `/usr/local/bin`:
+
+### ✅ `full_nmap`
+
+```bash
+full_nmap <target>
+```
+
+Automates your Nmap workflow
+
+* Full port scan
+* Extracts open ports
+* Runs `-sC -sV` against them automatically
+
+### ✅ `cme-brute-multiusers`
+
+```bash
+cme-brute-multiusers <target> <userlist> <passlist>
+```
+
+Brute-force SMB logins using CrackMapExec against several users and saves valid creds to `found.txt` so they won't get lost since the tool doesn't stop running after finding creds.
+
+### ✅ `my_commands`
+
+```bash
+my_commands
+```
+
+Shows you the list of installed helper scripts (like a self-updating index)
 
 ---
 
@@ -94,5 +128,6 @@ Ctrl+Super+2      → Move window to Workspace 2
 Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikoder) 💻
 
 ---
+
 TODOs:
-add rustscan, enum4linux-ng	, dig, dnsrecon, dnsenum, nikto, gobuster, msf and db init, nessus... to be continued 
+add rustscan, enum4linux-ng, dig, dnsrecon, dnsenum, nikto, gobuster, msf and db init, nessus... to be continued 🚀
