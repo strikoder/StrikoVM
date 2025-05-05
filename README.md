@@ -15,7 +15,10 @@ A lightweight and flexible bootstrap for Kali Linux pentesting environments — 
 Run this on any fresh Kali box to install tools, configure Zsh and tmux, fetch `linPEAS`, and get straight to pwning:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/strikoder/Strikodot-Kali-edition/main/setup.sh | bash
+git clone https://github.com/strikoder/Strikodot-Kali-edition.git
+cd Strikodot-Kali-edition
+chmod +x setup.sh
+./setup.sh
 ```
 
 ---
@@ -24,9 +27,6 @@ curl -sSL https://raw.githubusercontent.com/strikoder/Strikodot-Kali-edition/mai
 
 * `git`, `tmux`, `feroxbuster`, `dirbuster`, `seclists`
 
-## 📁 File Structure
-
-* Creates `~/strikodot` for tool storage
 
 ## 📥 Payload Fetching
 
