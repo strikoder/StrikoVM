@@ -6,6 +6,10 @@
 
 set -e
 
+# --- Step -1: Make setup location-aware ---
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
 # --- Step 0: Install Essential Packages ---
 echo -e "\n[+] Installing required packages..."
 sudo apt update && sudo apt install -y git tmux feroxbuster dirbuster seclists
@@ -96,9 +100,8 @@ echo "set clipboard=unnamedplus" | sudo tee -a /etc/vim/vimrc > /dev/null
 
 # --- Step 6: Copy Custom Tools ---
 echo -e "\n[+] Installing full_nmap and cme-brute-multiusers to /usr/local/bin..."
-
-sudo install -m 755 ./full_nmap.sh /usr/local/bin/full_nmap
-sudo install -m 755 ./cme-brute-multiusers.sh /usr/local/bin/cme-brute-multiusers
+sudo install -m 755 "$SCRIPT_DIR/full_nmap.sh" /usr/local/bin/full_nmap
+sudo install -m 755 "$SCRIPT_DIR/cme-brute-multiusers.sh" /usr/local/bin/cme-brute-multiusers
 
 # --- Step 7: Create my_commands helper ---
 echo -e "\n[+] Installing 'my_commands' helper to /usr/local/bin..."
