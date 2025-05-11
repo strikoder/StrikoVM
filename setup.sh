@@ -19,23 +19,9 @@ echo -e "\n[+] Creating ~/strikodot directory..."
 mkdir -p ~/strikodot
 cd ~/strikodot
 
-# --- Step 2.1: Download Linux Enumeration Scripts ---
-echo -e "[+] Downloading Linux enumeration tools..."
-# https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
-wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas_linux_amd64
-chmod +x linpeas.sh
-# https://github.com/The-Z-Labs/linux-exploit-suggester
-wget -q https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O linuxexploitsuggester.sh
-chmod +x linuxexploitsuggester.sh
-# https://github.com/rebootuser/LinEnum
-wget -q https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -O LinEnum.sh
-chmod +x LinEnum.sh
-# https://github.com/sleventyeleven/linuxprivchecker
-wget -q https://raw.githubusercontent.com/sleventyeleven/linuxprivchecker/master/linuxprivchecker.py -O linuxprivchecker.py
-
-# --- Step 2.2: Download Windows Enumeration Scripts ---
-echo -e "[+] Downloading Linux enumeration tools..."
-
+# --- Step 2: Download Linux & Windows Enumeration Scripts ---
+echo -e "\n[+] Downloading Linux and Windows enumeration scripts..."
+bash "$SCRIPT_DIR/enum_scripts.sh"
 
 # --- Step 3: Setup .zshrc Block ---
 echo -e "\n[+] Appending tmux auto-launch and addhost function to ~/.zshrc..."
