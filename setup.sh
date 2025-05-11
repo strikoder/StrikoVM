@@ -12,7 +12,19 @@ cd "$SCRIPT_DIR"
 
 # --- Step 0: Install Essential Packages ---
 echo -e "\n[+] Installing required packages..."
-sudo apt update && sudo apt install -y git tmux feroxbuster dirbuster gobuster seclists
+sudo apt update && sudo apt install -y git tmux feroxbuster dirbuster gobuster seclists dnsenum dnsrecon nikto enum4linux-ng
+
+# --- Step 0.1: Install Extra Tools Not in Base Kali ---
+echo -e "\n[+] Installing extra tools not in base Kali..."
+
+# rustscan
+if ! command -v rustscan &>/dev/null; then
+  echo "[+] Installing rustscan..."
+  RUSTSCAN_URL=$(curl -s https://api.github.com/repos/RustScan/RustScan/releases/latest | grep browser_download_url | grep amd64.deb | cut -d '"' -f 4)
+  wget "$RUSTSCAN_URL" -O rustscan.deb
+  sudo dpkg -i rustscan.deb || sudo apt -f install -y
+  rm rustscan.deb
+fi
 
 # --- Step 1: Create Workspace Directory ---
 echo -e "\n[+] Creating ~/strikodot directory..."
