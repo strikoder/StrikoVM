@@ -17,7 +17,6 @@ sudo apt update && sudo apt install -y git tmux feroxbuster dirbuster gobuster s
 # --- Step 1: Create Workspace Directory ---
 echo -e "\n[+] Creating ~/strikodot directory..."
 mkdir -p ~/strikodot
-cd ~/strikodot
 
 # --- Step 2: Download Linux & Windows Enumeration Scripts ---
 echo -e "\n[+] Downloading Linux and Windows enumeration scripts..."
