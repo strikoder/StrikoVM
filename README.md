@@ -23,14 +23,10 @@ chmod +x setup.sh
 
 ---
 
-## 🔧 Core Installs
-
-* `git`, `tmux`, `feroxbuster`, `dirbuster`, `seclists`
-
 
 ## 📥 Payload Fetching
 
-* Grabs the latest `linPEAS.sh` for Linux privilege escalation
+* Grabs the latest versions of Windows & Linux Enum scripts
 
 ## ⚙️ Zsh Setup
 
@@ -84,50 +80,45 @@ Shows you the list of installed helper scripts (like a self-updating index)
 
 ---
 
-## 📦 Manual Downloads
-
-Download and extract the following:
-
-* [Ligolo-ng](https://github.com/nicocha30/ligolo-ng/releases) — tunnel everything
-* [winPEAS](https://github.com/peass-ng/PEASS-ng/releases) — escalate on Windows like a boss
-
-👉 Place them in `~/strikodot/` for consistency.
-
-## 🧠 Configure Workspace Navigation Shortcuts
-
-Go to:
-
-```
-Settings > Keyboard > Shortcuts > Navigation
-```
-
-And set these like a proper tiling WM user:
-
-```
-Super+1           → Switch to Workspace 1  
-Super+2           → Switch to Workspace 2  
-Ctrl+Super+1      → Move window to Workspace 1  
-Ctrl+Super+2      → Move window to Workspace 2  
-```
-
----
-
 ## 🧰 My Pinned Pentest Tools (Auto + Manual)
 
+### 🔎 Enumeration
+
 * [linPEAS](https://github.com/carlospolop/PEASS-ng) — Linux privesc checker ✅ auto-installed
-* [winPEAS](https://github.com/carlospolop/PEASS-ng) — Windows privesc checker ❌ manual
-* [Ligolo-ng](https://github.com/nicocha30/ligolo-ng) — Reverse SOCKS tunneler ❌ manual
+* [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester) — Kernel exploit suggester ✅ auto-installed
+* [LinEnum](https://github.com/rebootuser/LinEnum) — Basic enum script ✅ auto-installed
+* [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker) — Python enum script ✅ auto-installed
+* [pSpy](https://github.com/DominicBreuker/pspy) — Process monitor without root ❌ manual
+
+🪟 
+
+* [winPEAS](https://github.com/carlospolop/PEASS-ng) — Windows privesc checker ✅ auto (x64 & .bat), PS version optional
+* [JAWS](https://github.com/411Hall/JAWS) — PowerShell enum script ✅ auto-installed
+* [PrivescCheck](https://github.com/itm4n/PrivescCheck) — PS privesc checks ✅ auto-installed
+* [PowerSploit](https://github.com/PowerShellMafia/PowerSploit) — Offensive PS modules ✅ auto-cloned
+* [SharpUp](https://github.com/GhostPack/SharpUp) — Local privesc tool ❌ manual build required
+* [Seatbelt](https://github.com/GhostPack/Seatbelt) — System enumeration tool ❌ manual build required
+* [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) — Best WinRM shell ❌ manual
+
+---
+### 🌐 Network & Web Discovery
+
 * [feroxbuster](https://github.com/epi052/feroxbuster) — Fast content discovery ✅ auto
 * [dirbuster](https://tools.kali.org/web-applications/dirbuster) — Classic brute-forcer ✅ auto
-* [ffuf](https://github.com/ffuf/ffuf) — Fast fuzzer for web dirs ❌ (install if needed)
-* [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) — Best WinRM shell ❌
-* [pSpy](https://github.com/DominicBreuker/pspy) — Process monitor without root ❌
+* [ffuf](https://github.com/ffuf/ffuf) — Fast fuzzer for web dirs ❌ optional
+* [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) — Modern SMB enumerator ✅ auto-installed
+* [rustscan](https://github.com/RustScan/RustScan) — Super-fast port scanner ✅ auto-installed from GitHub
+* [dnsenum](https://github.com/fwaeytens/dnsenum) — DNS recon tool ✅ auto
+* [dnsrecon](https://github.com/darkoperator/dnsrecon) — Python DNS recon ✅ auto
+* [nikto](https://github.com/sullo/nikto) — Web server scanner ✅ auto
+--- 
+### ⚙️ Frameworks & Infra
 
+* [Metasploit Framework](https://www.metasploit.com/) — Exploitation suite ✅ pre-installed, just run `msfdb init` for the first time
+* [Nessus](https://www.tenable.com/products/nessus) — Full vulnerability scanner ❌ manual download
+* [Ligolo-ng](https://github.com/nicocha30/ligolo-ng) — Reverse SOCKS tunneler ❌ manual
 ---
 
 Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikoder) 💻
 
 ---
-
-TODOs:
-add rustscan, enum4linux-ng, dig, dnsrecon, dnsenum, nikto, gobuster, msf and db init, nessus... to be continued 🚀
