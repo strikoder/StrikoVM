@@ -11,15 +11,12 @@ echo -e "\n[+] Downloading Linux enumeration tools..."
 
 # linPEAS
 wget -q https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas_linux_amd64 -O linpeas.sh
-chmod +x linpeas.sh
 
 # linux-exploit-suggester
 wget -q https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O linuxexploitsuggester.sh
-chmod +x linuxexploitsuggester.sh
 
 # LinEnum
 wget -q https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -O LinEnum.sh
-chmod +x LinEnum.sh
 
 # linuxprivchecker
 wget -q https://raw.githubusercontent.com/sleventyeleven/linuxprivchecker/master/linuxprivchecker.py -O linuxprivchecker.py
