@@ -109,5 +109,5 @@ echo -e "    Ctrl+Super+2 = Move window to Workspace 2"
 
 # --- Final Notices ---
 echo -e "\n[✓] Run 'my_commands' to see your available custom tools."
-echo -e "\n[!] Manual step: Download Ligolo-ng from https://github.com/nicocha30/ligolo-ng/releases"
+echo -e "\n[!] Manual step: Download Ligolo-ng & Nessus"
 echo -e "\n[✔] Strikodot-Kali-edition setup complete. Enjoy your shell."
