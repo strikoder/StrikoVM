@@ -1,4 +1,4 @@
-# 📁 Strikodot-Kali-edition
+# 📁 StrikoVM
 
 **Yep, I scripted everything *AGAIN*. This time it’s leaner, meaner, and finally reusable. Let’s go! 😎**
 
@@ -15,8 +15,8 @@ A lightweight and flexible bootstrap for Kali Linux pentesting environments — 
 Run this on any fresh Kali box to install tools, configure Zsh and tmux, fetch `linPEAS`, and get straight to pwning:
 
 ```bash
-git clone https://github.com/strikoder/Strikodot-Kali-edition.git
-cd Strikodot-Kali-edition
+git clone https://github.com/strikoder/StrikoVM.git
+cd StrikoVM
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -88,7 +88,6 @@ Shows you the list of installed helper scripts (like a self-updating index)
 * [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester) — Kernel exploit suggester ✅ auto-installed
 * [LinEnum](https://github.com/rebootuser/LinEnum) — Basic enum script ✅ auto-installed
 * [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker) — Python enum script ✅ auto-installed
-* [pSpy](https://github.com/DominicBreuker/pspy) — Process monitor without root ❌ manual
 
 🪟 
 
@@ -116,9 +115,20 @@ Shows you the list of installed helper scripts (like a self-updating index)
 
 * [Metasploit Framework](https://www.metasploit.com/) — Exploitation suite ✅ pre-installed, just run `msfdb init` for the first time
 * [Nessus](https://www.tenable.com/products/nessus) — Full vulnerability scanner ❌ manual download
-* [Ligolo-ng](https://github.com/nicocha30/ligolo-ng) — Reverse SOCKS tunneler ❌ manual
 ---
 
 Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikoder) 💻
 
 ---
+
+
+TODO:
+Autorecon / nmapAutomater.sh
+asesstfinder
+amass
+httprobe
+gowitness (might needs go -get gorm.io/gorm)
+sumrecon
+[Ligolo-ng](https://github.com/nicocha30/ligolo-ng)
+* [pSpy](https://github.com/DominicBreuker/pspy) — Process monitor without root ❌ manual
+
