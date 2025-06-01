@@ -56,19 +56,17 @@ As part of the setup, the following scripts are installed to `/usr/local/bin`:
 full_nmap <target>
 ```
 
+htb
+
+htba
+
+thm
+
 Automates your Nmap workflow
 
 * Full port scan
 * Extracts open ports
 * Runs `-sC -sV` against them automatically
-
-### ✅ `cme-brute-multiusers`
-
-```bash
-cme-brute-multiusers <target> <userlist> <passlist>
-```
-
-Brute-force SMB logins using CrackMapExec against several users and saves valid creds to `found.txt` so they won't get lost since the tool doesn't stop running after finding creds.
 
 ### ✅ `my_commands`
 
@@ -123,6 +121,7 @@ Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikode
 
 
 TODO:
+bloodhound + AD stuff
 Autorecon / nmapAutomater.sh
 asesstfinder
 amass
