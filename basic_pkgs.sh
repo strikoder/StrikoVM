@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo apt update && sudo apt install -y git tmux feroxbuster dirbuster gobuster seclists dnsenum dnsrecon nikto enum4linux-ng
+sudo apt update && sudo apt install -y git tmux feroxbuster dirbuster gobuster seclists dnsenum dnsrecon nikto enum4linux-ng mitm6
