@@ -11,8 +11,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 # --- Step 0: Install Essential Packages ---
-echo -e "\n[+] Installing required packages..."
-sudo apt update && sudo apt install -y git tmux feroxbuster dirbuster gobuster seclists dnsenum dnsrecon nikto enum4linux-ng
+echo -e "\n[+] Installing basic packages..."
+bash "$SCRIPT_DIR/basic_pkgs.sh"
 
 # --- Step 0.1: Install Extra Tools Not in Base Kali ---
 echo -e "\n[+] Installing extra tools not in base Kali..."
@@ -32,7 +32,7 @@ mkdir -p ~/strikodot
 
 # --- Step 2: Download Linux & Windows Enumeration Scripts ---
 echo -e "\n[+] Downloading Linux and Windows enumeration scripts..."
-bash "$SCRIPT_DIR/enum_scripts.sh"
+bash "$SCRIPT_DIR/privesc_enum_scripts.sh"
 
 # --- Step 3: Setup .zshrc Block ---
 echo -e "\n[+] Appending tmux auto-launch and addhost function to ~/.zshrc..."
