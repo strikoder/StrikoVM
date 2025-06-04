@@ -78,7 +78,7 @@ Shows you the list of installed helper scripts (like a self-updating index)
 
 ---
 
-## 🧰 My Pinned Pentest Tools (Auto + Manual)
+## 🧰 What this scripts add to you?
 
 ### 🔎 Enumeration
 
@@ -101,19 +101,17 @@ Shows you the list of installed helper scripts (like a self-updating index)
 ### 🌐 Network & Web Discovery
 
 * [feroxbuster](https://github.com/epi052/feroxbuster) — Fast content discovery ✅ auto
-* [dirbuster](https://tools.kali.org/web-applications/dirbuster) — Classic brute-forcer ✅ auto
 * [ffuf](https://github.com/ffuf/ffuf) — Fast fuzzer for web dirs ❌ optional
 * [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) — Modern SMB enumerator ✅ auto-installed
 * [rustscan](https://github.com/RustScan/RustScan) — Super-fast port scanner ✅ auto-installed from GitHub
-* [dnsenum](https://github.com/fwaeytens/dnsenum) — DNS recon tool ✅ auto
-* [dnsrecon](https://github.com/darkoperator/dnsrecon) — Python DNS recon ✅ auto
-* [nikto](https://github.com/sullo/nikto) — Web server scanner ✅ auto
 --- 
 ### ⚙️ Frameworks & Infra
 
 * [Metasploit Framework](https://www.metasploit.com/) — Exploitation suite ✅ pre-installed, just run `msfdb init` for the first time
 * [Nessus](https://www.tenable.com/products/nessus) — Full vulnerability scanner ❌ manual download
 ---
+
+### 😶‍🌫️ AD
 
 Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikoder) 💻
 
