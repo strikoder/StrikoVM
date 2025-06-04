@@ -55,13 +55,6 @@ As part of the setup, the following scripts are installed to `/usr/local/bin`:
 ```bash
 full_nmap <target>
 ```
-
-htb
-
-htba
-
-thm
-
 Automates your Nmap workflow
 
 * Full port scan
@@ -78,17 +71,16 @@ Shows you the list of installed helper scripts (like a self-updating index)
 
 ---
 
-## 🧰 What this scripts add to you?
+## 🧰 What this script adds to you?
 
 ### 🔎 Enumeration
-
+🐧
 * [linPEAS](https://github.com/carlospolop/PEASS-ng) — Linux privesc checker ✅ auto-installed
 * [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester) — Kernel exploit suggester ✅ auto-installed
 * [LinEnum](https://github.com/rebootuser/LinEnum) — Basic enum script ✅ auto-installed
 * [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker) — Python enum script ✅ auto-installed
 
 🪟 
-
 * [winPEAS](https://github.com/carlospolop/PEASS-ng) — Windows privesc checker ✅ auto (x64 & .bat), PS version optional
 * [JAWS](https://github.com/411Hall/JAWS) — PowerShell enum script ✅ auto-installed
 * [PrivescCheck](https://github.com/itm4n/PrivescCheck) — PS privesc checks ✅ auto-installed
@@ -104,18 +96,17 @@ Shows you the list of installed helper scripts (like a self-updating index)
 * [ffuf](https://github.com/ffuf/ffuf) — Fast fuzzer for web dirs ❌ optional
 * [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) — Modern SMB enumerator ✅ auto-installed
 * [rustscan](https://github.com/RustScan/RustScan) — Super-fast port scanner ✅ auto-installed from GitHub
---- 
-### ⚙️ Frameworks & Infra
-
-* [Metasploit Framework](https://www.metasploit.com/) — Exploitation suite ✅ pre-installed, just run `msfdb init` for the first time
-* [Nessus](https://www.tenable.com/products/nessus) — Full vulnerability scanner ❌ manual download
 ---
-
 ### 😶‍🌫️ AD
 
+mitm6
+---
 Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikoder) 💻
 
 ---
+
+## MANUAL
+* [Nessus](https://www.tenable.com/products/nessus) — Full vulnerability scanner ❌ manual download
 
 
 TODO:
