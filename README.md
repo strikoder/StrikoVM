@@ -1,8 +1,8 @@
 # 🐉 KaliPen
 
-**Yep, I scripted everything *AGAIN*. This time it’s leaner, meaner, and finally reusable. Let’s go! 😎**
+**Yep, I scripted everything *again*. This time it’s cleaner, faster, and actually reusable. Let’s go! 😎**
 
-A lightweight, modular bootstrap for Kali Linux pentesting environments — built for full automation, zero bloat, and terminal Zen.
+A one-command setup that turns a fresh Kali install into a fully-equipped, real-world pentesting environment — automated, modular, and zero bloat.
 
 ![Kali](https://img.shields.io/badge/Kali-Linux-blue?logo=linux&logoColor=white)
 ![Auto-Setup](https://img.shields.io/badge/Automated-Setup-success?style=flat-square&color=brightgreen)
