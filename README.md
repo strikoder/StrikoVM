@@ -68,7 +68,7 @@ Lists available custom commands — like a built-in cheat sheet.
 
 ## Tools You Get
 
-### Enumeration
+### Enumeration Scripts
 
 🐧 **Linux**
 
@@ -89,10 +89,12 @@ Lists available custom commands — like a built-in cheat sheet.
 
 ---
 
-### Network & Web
+### basic_pkgs
 
-* [feroxbuster](https://github.com/epi052/feroxbuster) 
-* [ffuf](https://github.com/ffuf/ffuf) ❌ optional
+* [feroxbuster](https://github.com/epi052/feroxbuster)   
+* [ffuf](https://github.com/ffuf/ffuf) 
+* [gobuster](https://github.com/epi052/feroxbuster)   
+* [dirbuster](https://github.com/epi052/feroxbuster)   
 * [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) 
 
 ---
@@ -128,7 +130,6 @@ Lists available custom commands — like a built-in cheat sheet.
 * [AutoRecon](https://github.com/Tib3rius/AutoRecon)
 * [nmapAutomator](https://github.com/21y4d/nmapAutomator)
 * [assetfinder](https://github.com/tomnomnom/assetfinder)
-* [amass](https://github.com/owasp-amass/amass)
 * [httprobe](https://github.com/tomnomnom/httprobe)
 * [gowitness](https://github.com/sensepost/gowitness)
 * [sumrecon](https://github.com/s0md3v/SumRecon)
