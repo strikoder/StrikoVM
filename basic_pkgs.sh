@@ -2,22 +2,32 @@
 set -e
 
 # --- Install base tools ---
-sudo apt update && sudo apt install -y git tmux gobuster seclists dnsenum dnsrecon nikto enum4linux-ng
+sudo apt update && sudo apt install -y git tmux seclists dnsenum dnsrecon nikto enum4linux-ng
 
-# --- Prompt for feroxbuster ---
-read -p "Do you want to install feroxbuster? [Y/N]: " install_ferox
-if [[ "$install_ferox" =~ ^[Yy]$ ]]; then
-    sudo apt install -y feroxbuster
-    echo "[✓] feroxbuster installed."
-else
-    echo "[!] Skipped feroxbuster."
-fi
+# --- Optional tools list ---
+declare -A tools=(
+  [1]="feroxbuster"
+  [2]="dirbuster"
+  [3]="ffuf"
+  [4]="gobuster"
+  [5]="amass"
+)
 
-# --- Prompt for dirbuster ---
-read -p "Do you want to install OWASP DirBuster? [Y/N]: " install_dirbuster
-if [[ "$install_dirbuster" =~ ^[Yy]$ ]]; then
-    sudo apt install -y dirbuster
-    echo "[✓] dirbuster installed."
-else
-    echo "[!] Skipped dirbuster."
-fi
+echo -e "\nOptional tools list:"
+for i in "${!tools[@]}"; do
+  echo "  $i) ${tools[$i]}"
+done
+
+read -p $'\nSelect tools to install (e.g. 1,3,5): ' selected
+
+IFS=',' read -ra choices <<< "$selected"
+for choice in "${choices[@]}"; do
+  tool="${tools[$choice]}"
+  if [ -n "$tool" ]; then
+    echo "[+] Installing $tool..."
+    sudo apt install -y "$tool"
+    echo "[✓] $tool installed."
+  else
+    echo "[!] Invalid choice: $choice"
+  fi
+done
