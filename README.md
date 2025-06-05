@@ -1,122 +1,138 @@
-# 📁 StrikoVM
+# 🐉 KaliPen
 
 **Yep, I scripted everything *AGAIN*. This time it’s leaner, meaner, and finally reusable. Let’s go! 😎**
 
-A lightweight and flexible bootstrap for Kali Linux pentesting environments — built for full automation, quick setup, and terminal Zen.
+A lightweight, modular bootstrap for Kali Linux pentesting environments — built for full automation, zero bloat, and terminal Zen.
 
-![Kali](https://img.shields.io/badge/Kali-Linux-blue?logo=linux\&logoColor=white)
-![Auto-Setup](https://img.shields.io/badge/Automated-Setup-success?style=flat-square\&color=brightgreen)
-![Made with ❤️ by \$tr!k0d3r](https://img.shields.io/badge/Maintained%20by-\$tr!k0d3r-blueviolet?style=flat-square)
+![Kali](https://img.shields.io/badge/Kali-Linux-blue?logo=linux&logoColor=white)
+![Auto-Setup](https://img.shields.io/badge/Automated-Setup-success?style=flat-square&color=brightgreen)
+![Maintained by \$tr!k0d3r](https://img.shields.io/badge/Maintained%20by-\$tr!k0d3r-blueviolet?style=flat-square)
 
 ---
 
-## ⚡ One-Line Full Setup
+## One-Line Full Setup
 
-Run this on any fresh Kali box to install tools, configure Zsh and tmux, fetch `linPEAS`, and get straight to pwning:
+Run this on any fresh Kali box to install tools, configure Zsh/tmux, fetch `linPEAS`, and get straight to pwning:
 
 ```bash
 git clone https://github.com/strikoder/StrikoVM.git
 cd StrikoVM
 chmod +x setup.sh
 ./setup.sh
-```
+````
 
 ---
 
+## ⚙ default config editing
 
-## 📥 Payload Fetching
+### Zsh Configuration
 
-* Grabs the latest versions of Windows & Linux Enum scripts
+* Auto-starts `tmux` in split mode
+* Adds `addhost` helper for `/etc/hosts`
 
-## ⚙️ Zsh Setup
+### Tmux Configuration
 
-* Auto-starts tmux on terminal open (with a vertical split by default)
-* Adds a clean `addhost` function to manage `/etc/hosts`
+* Vim-style pane nav
+* Mouse + clipboard support
+* Prefix remapped to `Ctrl+S` (bye `Ctrl+B` 👋)
 
-## 🪟 Tmux Configuration
+### Vim Fixes
 
-* Loads sane keybindings into `~/.tmux.conf`
-* Vim-style pane navigation, smart directory splitting
-* Enables mouse & clipboard support
-* Prefix changed from `Ctrl+B` to the less annoying `Ctrl+S`
-
-## 📝 Vim Clipboard
-
-* Enables system clipboard support for copy/paste magic
+* Enables system clipboard for yank/paste
 
 ---
 
 ## 🔧 Custom CLI Tools
 
-As part of the setup, the following scripts are installed to `/usr/local/bin`:
-
-### ✅ `full_nmap`
+### `full_nmap`
 
 ```bash
 full_nmap <target>
 ```
-Automates your Nmap workflow
 
-* Full port scan
+* Full TCP scan
 * Extracts open ports
-* Runs `-sC -sV` against them automatically
+* Runs `-sC -sV` scan on live ports
 
-### ✅ `my_commands`
+---
+
+### `my_commands`
 
 ```bash
 my_commands
 ```
 
-Shows you the list of installed helper scripts (like a self-updating index)
+Lists available custom commands — like a built-in cheat sheet.
 
 ---
 
-## 🧰 What this script adds to you?
+## Tools You Get
 
-### 🔎 Enumeration
-🐧
-* [linPEAS](https://github.com/carlospolop/PEASS-ng) — Linux privesc checker ✅ auto-installed
-* [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester) — Kernel exploit suggester ✅ auto-installed
-* [LinEnum](https://github.com/rebootuser/LinEnum) — Basic enum script ✅ auto-installed
-* [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker) — Python enum script ✅ auto-installed
+### Enumeration
 
-🪟 
-* [winPEAS](https://github.com/carlospolop/PEASS-ng) — Windows privesc checker ✅ auto (x64 & .bat), PS version optional
-* [JAWS](https://github.com/411Hall/JAWS) — PowerShell enum script ✅ auto-installed
-* [PrivescCheck](https://github.com/itm4n/PrivescCheck) — PS privesc checks ✅ auto-installed
-* [PowerSploit](https://github.com/PowerShellMafia/PowerSploit) — Offensive PS modules ✅ auto-cloned
-* [SharpUp](https://github.com/GhostPack/SharpUp) — Local privesc tool ❌ manual build required
-* [Seatbelt](https://github.com/GhostPack/Seatbelt) — System enumeration tool ❌ manual build required
-* [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) — Best WinRM shell ❌ manual
+🐧 **Linux**
+
+* [linPEAS](https://github.com/carlospolop/PEASS-ng) ✅ auto
+* [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester) ✅ auto
+* [LinEnum](https://github.com/rebootuser/LinEnum) ✅ auto
+* [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker) ✅ auto
+
+🪟 **Windows**
+
+* [winPEAS](https://github.com/carlospolop/PEASS-ng) ✅ auto (`.exe` & `.bat`)
+* [JAWS](https://github.com/411Hall/JAWS) ✅ auto
+* [PrivescCheck](https://github.com/itm4n/PrivescCheck) ✅ auto
+* [PowerSploit](https://github.com/PowerShellMafia/PowerSploit) ✅ auto
+* [SharpUp](https://github.com/GhostPack/SharpUp) ❌ manual build
+* [Seatbelt](https://github.com/GhostPack/Seatbelt) ❌ manual build
+* [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) ❌ manual
 
 ---
-### 🌐 Network & Web Discovery
 
-* [feroxbuster](https://github.com/epi052/feroxbuster) — Fast content discovery ✅ auto
-* [ffuf](https://github.com/ffuf/ffuf) — Fast fuzzer for web dirs ❌ optional
-* [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) — Modern SMB enumerator ✅ auto-installed
-* [rustscan](https://github.com/RustScan/RustScan) — Super-fast port scanner ✅ auto-installed from GitHub
----
-### 😶‍🌫️ AD
+### Network & Web
 
-mitm6
+* [feroxbuster](https://github.com/epi052/feroxbuster) 
+* [ffuf](https://github.com/ffuf/ffuf) ❌ optional
+* [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) ✅ auto
+
 ---
+
+### Active Directory
+
+* [mitm6](https://github.com/fox-it/mitm6) 
+* [kerbrute](https://github.com/ropnop/kerbrute) 
+
+### Wordlists
+* `rockyou.txt` You have the choice to extract it or not
+* [`jsmith.txt`](https://github.com/insidetrust/statistically-likely-usernames/blob/master/jsmith.txt) `/wordlists/custom/AD/jsmith/`
+
+---
+
+## 🔧 Manual Download
+
+* [Nessus](https://www.tenable.com/products/nessus) ❌ manual download
+* [Ligolo-ng](https://github.com/nicocha30/ligolo-ng) ❌ manual
+* [pSpy](https://github.com/DominicBreuker/pspy) ❌ manual
+* [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) ❌ manual
+---
+## May be Needed 
+* [windapsearch](https://github.com/ropnop/windapsearch)
+
+##
+
+---
+
+## To Be Added (TODO)
+
+* [bloodhound](https://github.com/BloodHoundAD/BloodHound) + SharpHound
+* [AutoRecon](https://github.com/Tib3rius/AutoRecon)
+* [nmapAutomator](https://github.com/21y4d/nmapAutomator)
+* [assetfinder](https://github.com/tomnomnom/assetfinder)
+* [amass](https://github.com/owasp-amass/amass)
+* [httprobe](https://github.com/tomnomnom/httprobe)
+* [gowitness](https://github.com/sensepost/gowitness)
+* [sumrecon](https://github.com/s0md3v/SumRecon)
+
+---
+
 Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikoder) 💻
-
----
-
-## MANUAL
-* [Nessus](https://www.tenable.com/products/nessus) — Full vulnerability scanner ❌ manual download
-
-
-TODO:
-bloodhound + AD stuff
-Autorecon / nmapAutomater.sh
-asesstfinder
-amass
-httprobe
-gowitness (might needs go -get gorm.io/gorm)
-sumrecon
-[Ligolo-ng](https://github.com/nicocha30/ligolo-ng)
-* [pSpy](https://github.com/DominicBreuker/pspy) — Process monitor without root ❌ manual
-
