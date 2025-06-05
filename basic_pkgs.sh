@@ -8,10 +8,10 @@ sudo apt update && sudo apt install -y git tmux seclists dnsenum dnsrecon nikto 
 
 # --- Optional tools list ---
 declare -A tools=(
-  [1]="feroxbuster"
+  [1]="gobuster"
   [2]="dirbuster"
   [3]="ffuf"
-  [4]="gobuster"
+  [4]="feroxbuster"
   [5]="amass"
 )
 
