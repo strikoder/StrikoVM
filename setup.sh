@@ -17,7 +17,20 @@ bash "$SCRIPT_DIR/basic_pkgs.sh"
 echo -e "\n[+] Downloading Linux and Windows enumeration scripts..."
 bash "$SCRIPT_DIR/privesc_enum_scripts.sh"
 
-# --- Step 3: Setup .zshrc Block ---
+
+# --- Step 3: Install AD-Related Packages ---
+echo -e "\n[+] Installing Active Directory Tools..."
+bash "$SCRIPT_DIR/AD_pkgs.sh"
+
+
+# --- Step 4: Download Wordlists ---
+echo -e "\n[+] Downloading Wordlists..."
+bash "$SCRIPT_DIR/wordlists.sh"
+
+
+# --- TODO: Install MiscTools ---
+
+# --- Step 5: Setup .zshrc Block ---
 echo -e "\n[+] Appending tmux auto-launch and addhost function to ~/.zshrc..."
 cat << 'EOF' >> ~/.zshrc
 
@@ -41,7 +54,7 @@ addhost() {
 }
 EOF
 
-# --- Step 4: Create ~/.tmux.conf ---
+# --- Step 6: Create ~/.tmux.conf ---
 echo -e "\n[+] Writing tmux configuration to ~/.tmux.conf..."
 cat << 'EOF' > ~/.tmux.conf
 # Prefix Key
@@ -64,20 +77,17 @@ bind-key -n F5 select-window -t :0
 set -g status-right "Strikoder"
 EOF
 
-# --- Step 5: Vim clipboard fixing ---
+# --- Step 7: Vim clipboard fixing ---
 echo -e "\n[+] Enabling system clipboard for Vim..."
 echo "set clipboard=unnamedplus" | sudo tee -a /etc/vim/vimrc > /dev/null
 
-# --- Step 6: Keyboard Shortcut Guidance ---
+# --- Step 8: Keyboard Shortcut Guidance ---
 echo -e "\n[!] Don’t forget to configure keyboard shortcuts under:"
 echo -e "    Settings > Keyboard > Shortcuts > Navigation"
 echo -e "    Super+1 = Switch to Workspace 1"
 echo -e "    Super+2 = Switch to Workspace 2"
 echo -e "    Ctrl+Super+1 = Move window to Workspace 1"
 echo -e "    Ctrl+Super+2 = Move window to Workspace 2"
-
-# --- Step 7: Re-write the Copy Custom Tools (TODO) ---
-# TODO: Add prompt for each tool, and my_commands helper updates
 
 # --- Final Notices ---
 echo -e "\n[!] Check Manual Downloads"
