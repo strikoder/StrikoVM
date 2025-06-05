@@ -5,13 +5,13 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
-# --- Step 0: Install Essential Packages ---
-echo -e "\n[+] Installing basic packages..."
-bash "$SCRIPT_DIR/basic_pkgs.sh"
-
-# --- Step 1: Create Workspace Directory ---
+# --- Step 0: Create Workspace Directory ---
 echo -e "\n[+] Creating ~/kalipen directory..."
 mkdir -p ~/kalipen
+
+# --- Step 1: Install Basic Packages ---
+echo -e "\n[+] Installing Basic Packages..."
+bash "$SCRIPT_DIR/basic_pkgs.sh"
 
 # --- Step 2: Download Linux & Windows Enumeration Scripts ---
 echo -e "\n[+] Downloading Linux and Windows enumeration scripts..."
@@ -25,7 +25,6 @@ cat << 'EOF' >> ~/.zshrc
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux has-session -t main 2>/dev/null || {
         tmux new-session -d -s main
-        tmux split-window -h -t main
     }
     tmux attach-session -t main
 fi
