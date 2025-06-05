@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# --- Step 1: Install Extra Tools Not in Base Kali ---
+echo -e "\n[+] Installing extra tools from GitHub..."
+
 # rustscan
 if ! command -v rustscan &>/dev/null; then
   echo "[+] Installing rustscan..."
