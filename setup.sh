@@ -1,9 +1,4 @@
 #!/bin/bash
-
-# -------------------------------------------
-# Strikodot-Kali-edition Bootstrap Installer
-# -------------------------------------------
-
 set -e
 
 # --- Step -1: Make setup location-aware ---
@@ -14,21 +9,9 @@ cd "$SCRIPT_DIR"
 echo -e "\n[+] Installing basic packages..."
 bash "$SCRIPT_DIR/basic_pkgs.sh"
 
-# --- Step 0.1: Install Extra Tools Not in Base Kali ---
-echo -e "\n[+] Installing extra tools not in base Kali..."
-
-# rustscan
-if ! command -v rustscan &>/dev/null; then
-  echo "[+] Installing rustscan..."
-  RUSTSCAN_URL=$(curl -s https://api.github.com/repos/RustScan/RustScan/releases/latest | grep browser_download_url | grep amd64.deb | cut -d '"' -f 4)
-  wget "$RUSTSCAN_URL" -O rustscan.deb
-  sudo dpkg -i rustscan.deb || sudo apt -f install -y
-  rm rustscan.deb
-fi
-
 # --- Step 1: Create Workspace Directory ---
-echo -e "\n[+] Creating ~/strikodot directory..."
-mkdir -p ~/strikodot
+echo -e "\n[+] Creating ~/kalipen directory..."
+mkdir -p ~/kalipen
 
 # --- Step 2: Download Linux & Windows Enumeration Scripts ---
 echo -e "\n[+] Downloading Linux and Windows enumeration scripts..."
@@ -80,33 +63,23 @@ bind-key -n F5 select-window -t :0
 
 # Status Bar
 set -g status-right "Strikoder"
+EOF
 
 # --- Step 5: Vim clipboard fixing ---
 echo -e "\n[+] Enabling system clipboard for Vim..."
 echo "set clipboard=unnamedplus" | sudo tee -a /etc/vim/vimrc > /dev/null
 
-# --- Step 6: Copy Custom Tools ---
-echo -e "\n[+] Installing full_nmap and cme-brute-multiusers to /usr/local/bin..."
-sudo install -m 755 "$SCRIPT_DIR/full_nmap.sh" /usr/local/bin/full_nmap
-
-# --- Step 7: Create my_commands helper ---
-echo -e "\n[+] Installing 'my_commands' helper to /usr/local/bin..."
-sudo tee /usr/local/bin/my_commands > /dev/null << 'EOF'
-#!/bin/bash
-echo -e "\nAvailable Custom Commands:\n"
-echo -e "🔹 full_nmap <target>\n   → Run full + detailed Nmap scans"
-echo -e "🔹 cme-brute-multiusers <target> <userlist> <passlist>\n   → Brute SMB with CME and save valid creds for multiple users"
-EOF
-sudo chmod +x /usr/local/bin/my_commands
-
-# --- Step 8: Keyboard Shortcut Guidance ---
-echo -e "\n[!] Don’t forget to configure keyboard shortcuts under Settings > Keyboard > Shortcuts > Navigation:"
+# --- Step 6: Keyboard Shortcut Guidance ---
+echo -e "\n[!] Don’t forget to configure keyboard shortcuts under:"
+echo -e "    Settings > Keyboard > Shortcuts > Navigation"
 echo -e "    Super+1 = Switch to Workspace 1"
 echo -e "    Super+2 = Switch to Workspace 2"
 echo -e "    Ctrl+Super+1 = Move window to Workspace 1"
 echo -e "    Ctrl+Super+2 = Move window to Workspace 2"
 
+# --- Step 7: Re-write the Copy Custom Tools (TODO) ---
+# TODO: Add prompt for each tool, and my_commands helper updates
+
 # --- Final Notices ---
-echo -e "\n[✓] Run 'my_commands' to see your available custom tools."
-echo -e "\n[!] Manual step: Download Ligolo-ng & Nessus"
+echo -e "\n[!] Check Manual Downloads"
 echo -e "\n[✔] Strikodot-Kali-edition setup complete. Enjoy your shell."
