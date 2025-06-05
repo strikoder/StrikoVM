@@ -12,11 +12,11 @@ A lightweight, modular bootstrap for Kali Linux pentesting environments — buil
 
 ## One-Line Full Setup
 
-Run this on any fresh Kali box to install tools, configure Zsh/tmux, fetch `linPEAS`, and get straight to pwning:
+Run this on any fresh Kali box to install tools, configure Zsh/tmux, fetch `enum scripts`, and more:
 
 ```bash
-git clone https://github.com/strikoder/StrikoVM.git
-cd StrikoVM
+git clone https://github.com/strikoder/kalipen.git
+cd kalipen
 chmod +x setup.sh
 ./setup.sh
 ````
@@ -72,17 +72,17 @@ Lists available custom commands — like a built-in cheat sheet.
 
 🐧 **Linux**
 
-* [linPEAS](https://github.com/carlospolop/PEASS-ng) ✅ auto
-* [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester) ✅ auto
-* [LinEnum](https://github.com/rebootuser/LinEnum) ✅ auto
-* [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker) ✅ auto
+* [linPEAS](https://github.com/carlospolop/PEASS-ng)
+* [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester) 
+* [LinEnum](https://github.com/rebootuser/LinEnum) 
+* [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker) 
 
 🪟 **Windows**
 
-* [winPEAS](https://github.com/carlospolop/PEASS-ng) ✅ auto (`.exe` & `.bat`)
-* [JAWS](https://github.com/411Hall/JAWS) ✅ auto
-* [PrivescCheck](https://github.com/itm4n/PrivescCheck) ✅ auto
-* [PowerSploit](https://github.com/PowerShellMafia/PowerSploit) ✅ auto
+* [winPEAS](https://github.com/carlospolop/PEASS-ng) (`.exe` & `.bat`)
+* [JAWS](https://github.com/411Hall/JAWS) 
+* [PrivescCheck](https://github.com/itm4n/PrivescCheck) 
+* [PowerSploit](https://github.com/PowerShellMafia/PowerSploit) 
 * [SharpUp](https://github.com/GhostPack/SharpUp) ❌ manual build
 * [Seatbelt](https://github.com/GhostPack/Seatbelt) ❌ manual build
 * [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) ❌ manual
@@ -93,7 +93,7 @@ Lists available custom commands — like a built-in cheat sheet.
 
 * [feroxbuster](https://github.com/epi052/feroxbuster) 
 * [ffuf](https://github.com/ffuf/ffuf) ❌ optional
-* [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) ✅ auto
+* [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) 
 
 ---
 
