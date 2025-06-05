@@ -1,4 +1,6 @@
 #!/bin/bash
+# --- This file includes basic pkgs that can be insatlled with apt ---
+
 set -e
 
 # --- Install base tools ---
