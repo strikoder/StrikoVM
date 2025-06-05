@@ -3,6 +3,7 @@ set -e
 
 # Install dependencies
 sudo apt update && sudo apt install -y golang mitm6 impacket-scripts
+echo "[✓] mitm6 & impacket-scripts installed"
 
 # Clone kerbrute repo
 git clone https://github.com/ropnop/kerbrute.git ~/Downloads/kerbrute
