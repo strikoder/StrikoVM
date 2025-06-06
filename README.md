@@ -44,16 +44,6 @@ chmod +x setup.sh
 
 ## 🔧 Custom CLI Tools
 
-### `full_nmap`
-
-```bash
-full_nmap <target>
-```
-
-* Full TCP scan
-* Extracts open ports
-* Runs `-sC -sV` scan on live ports
-
 ---
 
 ### `my_commands`
@@ -64,6 +54,17 @@ my_commands
 
 Lists available custom commands — like a built-in cheat sheet.
 
+---
+
+---
+
+### `my_commands`
+
+```bash
+addhost IP DSFN
+```
+
+Add a host ip to /etc/hosts
 ---
 
 ## Tools You Get
