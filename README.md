@@ -56,8 +56,6 @@ Lists available custom commands — like a built-in cheat sheet.
 
 ---
 
----
-
 ### `my_commands`
 
 ```bash
@@ -121,13 +119,11 @@ Add a host ip to /etc/hosts
 ## May be Needed 
 * [windapsearch](https://github.com/ropnop/windapsearch)
 
-##
-
 ---
 
 ## To Be Added (TODO)
 
-* [bloodhound](https://github.com/BloodHoundAD/BloodHound) + SharpHound
+* SharpHound
 * [AutoRecon](https://github.com/Tib3rius/AutoRecon)
 * [nmapAutomator](https://github.com/21y4d/nmapAutomator)
 * [assetfinder](https://github.com/tomnomnom/assetfinder)
@@ -137,4 +133,4 @@ Add a host ip to /etc/hosts
 
 ---
 
-Maintained (and obsessively tweaked) by [@strikoder](https://github.com/strikoder) 💻
+Maintained (and obsessively tweaked) by [@strikoder](https://www.youtube.com/@strikoder) 💻
