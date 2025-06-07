@@ -38,7 +38,7 @@ chmod +x setup.sh
 
 ### Vim Fixes
 
-* Enables system clipboard for yank/paste
+* System clipboard support for yank/paste
 
 ---
 
@@ -56,10 +56,10 @@ Lists available custom commands — like a built-in cheat sheet.
 
 ---
 
-### `my_commands`
+### `addhost`
 
 ```bash
-addhost IP DSFN
+addhost 10.10.14.25 target.local
 ```
 
 Add a host ip to /etc/hosts
@@ -89,19 +89,45 @@ Add a host ip to /etc/hosts
 ---
 
 ### basic_pkgs
+tmux, git, unzip, make, golang, wget, python3-pip
 
-* [feroxbuster](https://github.com/epi052/feroxbuster)   
-* [ffuf](https://github.com/ffuf/ffuf) 
-* [gobuster](https://github.com/epi052/feroxbuster)   
-* [dirbuster](https://github.com/epi052/feroxbuster)   
-* [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) 
+enum4linux-ng, dnsenum, dnsrecon, nikto, seclists
 
+Choose interactively:
+
+ffuf
+
+feroxbuster
+
+gobuster
+
+dirbuster
+
+---
+
+### WEB
+subfinder
+
+amass (passive)
+
+findomain
+
+dnsx
+
+httpx
+
+aquatone
 ---
 
 ### Active Directory
 
-* [mitm6](https://github.com/fox-it/mitm6) 
-* [kerbrute](https://github.com/ropnop/kerbrute) 
+kerbrute — from source + compiled
+
+mitm6 — via apt
+
+PlumHound — automated install + wrapper
+
+SharpHound Collectors — .exe and .ps1 downloaded & ready
 
 ### Wordlists
 * `rockyou.txt` You have the choice to extract it or not
