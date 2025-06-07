@@ -38,12 +38,8 @@ dnsx -silent -l "$SUBS_UNIQ" > "$LIVE_SUBS"
 echo "[*] Checking live web services with httpx..."
 httpx -silent -l "$LIVE_SUBS" -ports 80,443,8000,8080,8443 -title -status-code -tech-detect -o "$OUT_DIR/httpx_results.txt"
 
-# Optional: Visual recon with aquatone
-if command -v aquatone >/dev/null 2>&1; then
-  echo "[*] Taking screenshots with aquatone..."
-  cat "$LIVE_SUBS" | aquatone -out "$OUT_DIR/aquatone"
-else
-  echo "[!] Aquatone not installed. Skipping screenshots."
-fi
+# Step 5: Screenshots with gowitness
+echo "[*] Taking screenshots with GoWitness..."
+gowitness file -f "$OUT_DIR/httpx_urls.txt" --timeout 5 --threads 10 --log-level error --destination "$OUT_DIR/gowitness"
 
 echo "[✓] Recon completed. Results saved in $OUT_DIR/"
