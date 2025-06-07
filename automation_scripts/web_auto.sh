@@ -42,4 +42,5 @@ httpx -silent -l "$LIVE_SUBS" -ports 80,443,8000,8080,8443 -title -status-code -
 echo "[*] Taking screenshots with GoWitness..."
 gowitness file -f "$OUT_DIR/httpx_urls.txt" --timeout 5 --threads 10 --log-level error --destination "$OUT_DIR/gowitness"
 
+
 echo "[✓] Recon completed. Results saved in $OUT_DIR/"
