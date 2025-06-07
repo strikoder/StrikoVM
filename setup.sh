@@ -11,21 +11,21 @@ mkdir -p ~/kalipen
 
 # --- Step 1: Install Basic Packages ---
 echo -e "\n[+] Installing Basic Packages..."
-bash "$SCRIPT_DIR/basic_tools.sh"
+bash "$SCRIPT_DIR/installation_scripts/basic_tools.sh"
 
 # --- Step 2: Download Linux & Windows Enumeration Scripts ---
 echo -e "\n[+] Downloading Linux and Windows enumeration scripts..."
-bash "$SCRIPT_DIR/privesc_enum_scripts.sh"
+bash "$SCRIPT_DIR/installation_scripts/privesc_enum_scripts.sh"
 
 
 # --- Step 3: Install AD-Related Packages ---
 echo -e "\n[+] Installing Active Directory Tools..."
-bash "$SCRIPT_DIR/AD_tools.sh"
+bash "$SCRIPT_DIR/installation_scripts/AD_tools.sh"
 
 
 # --- Step 4: Download Wordlists ---
 echo -e "\n[+] Downloading Wordlists..."
-bash "$SCRIPT_DIR/wordlists.sh"
+bash "$SCRIPT_DIR/installation_scripts/wordlists.sh"
 
 
 # --- TODO: Install MiscTools ---
