@@ -44,3 +44,4 @@ gowitness file -f "$OUT_DIR/httpx_urls.txt" --timeout 5 --threads 10 --log-level
 
 
 echo "[✓] Recon completed. Results saved in $OUT_DIR/"
+echo " [+] Hint: grep for dev, test, stage, admin"
