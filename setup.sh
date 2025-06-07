@@ -11,7 +11,7 @@ mkdir -p ~/kalipen
 
 # --- Step 1: Install Basic Packages ---
 echo -e "\n[+] Installing Basic Packages..."
-bash "$SCRIPT_DIR/basic_pkgs.sh"
+bash "$SCRIPT_DIR/basic_tools.sh"
 
 # --- Step 2: Download Linux & Windows Enumeration Scripts ---
 echo -e "\n[+] Downloading Linux and Windows enumeration scripts..."
@@ -20,7 +20,7 @@ bash "$SCRIPT_DIR/privesc_enum_scripts.sh"
 
 # --- Step 3: Install AD-Related Packages ---
 echo -e "\n[+] Installing Active Directory Tools..."
-bash "$SCRIPT_DIR/AD_pkgs.sh"
+bash "$SCRIPT_DIR/AD_tools.sh"
 
 
 # --- Step 4: Download Wordlists ---
