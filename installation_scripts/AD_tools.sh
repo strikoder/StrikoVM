@@ -34,3 +34,5 @@ echo "[✓] SharpHound collectors downloaded to: $DEST"
 
 echo ""
 echo "[✔] All AD tools installed and configured successfully!"
+
+#CHECK FOR SHARPHOUND (IT'S BEING DOWNLOADED BY DEFAULT WITH BLOODHOUND)
