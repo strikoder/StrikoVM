@@ -3,7 +3,7 @@ set -e
 
 # ---------- SYSTEM DEPENDENCIES ----------
 echo "[*] Installing mitm6, Impacket, Go ..."
-sudo apt update && sudo apt install -y golang mitm6 impacket-scripts unzip wget make python3-pip
+sudo apt update && sudo apt install -y golang mitm6 impacket-scripts unzip wget make python3-pip bloodhound
 echo "[✓] Core dependencies installed"
 
 # ---------- KERBRUTE ----------
