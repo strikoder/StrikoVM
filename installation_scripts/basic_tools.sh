@@ -4,7 +4,7 @@
 set -e
 
 # --- Install base tools ---
-sudo apt update && sudo apt install -y git tmux seclists dnsenum dnsrecon nikto enum4linux-ng
+sudo apt update && sudo apt install -y git tmux seclists dnsenum dnsrecon nikto enum4linux-ng vim-gtk3
 
 # --- Optional tools list ---
 declare -A tools=(
