@@ -7,6 +7,17 @@ sudo apt update && sudo apt install -y golang git mitm6 impacket-scripts bloodho
 echo "[*] Installing Python packages globally (with --break-system-packages)..."
 sudo pip3 install --break-system-packages ldapdomaindump ldap3 dnspython
 
+# ---------- CERTIPY ----------
+echo "[*] Installing Certipy (Active Directory version)..."
+sudo pip3 install certipy-ad --break-system-packages || {
+    echo "[!] Certipy installation failed. If you see an error about 'beautifulsoup4', run:"
+    echo "    sudo apt remove --purge python3-bs4 -y"
+    echo "Then re-run:"
+    echo "    sudo pip3 install certipy-ad --break-system-packages"
+    exit 1
+}
+echo "[✓] Certipy installed successfully"
+
 # ---------- KERBRUTE ----------
 echo "[*] Installing Kerbrute..."
 git clone https://github.com/ropnop/kerbrute.git ~/Downloads/kerbrute
