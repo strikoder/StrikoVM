@@ -42,18 +42,6 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach-session -t main
 fi
 
-# Add or update a host entry in /etc/hosts
-addhost() {
-  if [ $# -ne 2 ]; then
-    echo "Usage: addhost <IP> <hostname>"
-    return 1
-  fi
-  sudo sed -i "/[[:space:]]$2$/d" /etc/hosts
-  echo "$1 $2" | sudo tee -a /etc/hosts > /dev/null
-  echo "Added/Updated: $1 $2"
-}
-EOF
-
 # --- Step 6: Create ~/.tmux.conf ---
 echo -e "\n[+] Writing tmux configuration to ~/.tmux.conf..."
 cat << 'EOF' > ~/.tmux.conf
@@ -88,6 +76,12 @@ echo -e "    Super+1 = Switch to Workspace 1"
 echo -e "    Super+2 = Switch to Workspace 2"
 echo -e "    Ctrl+Super+1 = Move window to Workspace 1"
 echo -e "    Ctrl+Super+2 = Move window to Workspace 2"
+
+# --- Step X: Source custom scripts in .zshrc ---
+echo -e "\n[+] Sourcing custom_scripts.sh in ~/.zshrc..."
+echo "[ -f \"$SCRIPT_DIR/custom_scripts.sh\" ] && source \"$SCRIPT_DIR/custom_scripts.sh\"" >> ~/.zshrc
+
+
 
 # --- Final Notices ---
 echo -e "\n[!] Check Manual Downloads"
