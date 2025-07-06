@@ -12,58 +12,56 @@ A one-command setup that turns a fresh Kali install into a fully-equipped, real-
 
 ## One-Line Full Setup
 
-Run this on any fresh Kali box to install tools, configure Zsh/tmux, fetch `enum scripts`, and more:
+Run this on any fresh Kali box to install tools, configure Zsh/tmux/vim, fetch enumeration scripts, and load custom shell functions:
 
 ```bash
 git clone https://github.com/strikoder/kalipen.git
 cd kalipen
 chmod +x setup.sh
 ./setup.sh
-````
+```
 
 ---
 
-## ⚙ default config editing
+## ⚙ Configuration Overview
 
-### Zsh Configuration
+### 🔹 Zsh Setup
+- Auto-launches `tmux` on terminal open  
+- Loads custom functions from `custom_scripts.sh`  
+- Adds helpers like `addhost`, `stable`, `my_commands`
 
-* Auto-starts `tmux` in split mode
-* Adds `addhost` helper for `/etc/hosts`
+### 🔹 Tmux Config
+- Prefix remapped to `Ctrl+S`  
+- Mouse + clipboard enabled  
+- F1–F5 window shortcuts  
 
-### Tmux Configuration
-
-* Vim-style pane nav
-* Mouse + clipboard support
-* Prefix remapped to `Ctrl+S` (bye `Ctrl+B` 👋)
-
-### Vim Fixes
-
-* System clipboard support for yank/paste
+### 🔹 Vim Fix
+- Enables system clipboard (`unnamedplus`) for yank/paste  
 
 ---
 
-## 🔧 Custom CLI Tools
+## 🛠️ Custom CLI Functions
 
----
+These are sourced into every new shell via `custom_scripts.sh`.
 
 ### `my_commands`
-
 ```bash
 my_commands
 ```
-
-Lists available custom commands — like a built-in cheat sheet.
-
----
+Lists all available custom helper functions.
 
 ### `addhost`
-
 ```bash
 addhost 10.10.14.25 target.local
 ```
+Adds or updates an entry in `/etc/hosts`.
 
-Add a host ip to /etc/hosts
----
+### `stable`
+```bash
+stable
+```
+Prints a full stable shell upgrade procedure with useful aliases.
+
 
 ## Tools You Get
 
