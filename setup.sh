@@ -30,15 +30,13 @@ bash "$SCRIPT_DIR/installation_scripts/wordlists.sh"
 
 # --- TODO: Install MiscTools ---
 
-
 # --- Step 5: Source custom scripts in .zshrc ---
 echo -e "\n[+] Sourcing custom_scripts.sh in ~/.zshrc..."
 echo "[ -f \"$SCRIPT_DIR/custom_scripts.sh\" ] && source \"$SCRIPT_DIR/custom_scripts.sh\"" >> ~/.zshrc
 
-# --- Step 6: Run post-install config ---
+# --- Step 6: Run post-install configs ---
 echo -e "\n[+] Running post-install configuration script..."
-bash "$SCRIPT_DIR/post_install_config.sh"
-
+bash "$SCRIPT_DIR/post_install_configs.sh"
 
 
 # --- Final Notices ---
